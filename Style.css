@@ -1,0 +1,892 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Dancing+Script:wght@600&family=Poppins:wght@100;300;400&family=Roboto:wght@300&family=Source+Serif+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+/*
+font-family: 'Cinzel', serif;
+font-family: 'Dancing Script', cursive; - fete
+font-family: 'Poppins', sans-serif; -fain
+font-family: 'Source Serif Pro', serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+body{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+}
+header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+	background-color: transparent;
+	position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    z-index: 9999;
+	text-align: center;
+}
+header .titlu{
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	display: flex;
+	flex-direction: column;
+}
+header .titlu .titlu-inchirieri{
+    width: max-content;
+    height: max-content;
+	font-family: 'Poppins', sans-serif; 
+	font-weight: 700;
+    font-size: 20px;
+    color: #fca311;
+	cursor: pointer;
+}
+header .titlu-doka{
+	width: max-content;
+	position: relative;
+	bottom: 10px;
+	padding-right: 20px;
+	display: flex;
+	align-self: flex-end;
+	font-size: 24px;
+	font-family: 'Poppins', sans-serif; 
+	font-weight: 700;
+	color: #FFFFFF;
+}
+.headerColorOn{
+    transition: all .8s ease;
+    background-color: black;
+	box-shadow: 0 0 6px 6px rgba(0, 0, 0, .1);
+}
+.headerColorOut{
+    transition: all .8s ease;
+    background-color: transparent;
+}
+
+		/*=== HUMBURGER ===*/
+header .humburger{
+    padding-right: 15px;
+    visibility: hidden;
+}
+.btn-close{
+    width: 50px;
+    height: 50px;
+    color: white;
+	font-size: 50px; 
+    color: #FFF;
+    line-height: 100px;
+    text-align: center;
+}
+.h-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.h-button ul{
+    width: max-content;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+}
+.h-button ul li{
+    width: 35px;
+    height: 3.5px;
+    background-color: white;
+}
+		
+		/*=== MENU ===*/
+.activare{
+    background-color: transparent;
+}
+header .menu-a ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 28px;
+	padding-right: 15px;
+}
+header .menu-a ul li{
+	height: max-content;
+	transition: all .4s;
+	overflow: none;
+}
+header .menu-a ul li a{
+	width: 100%;
+	height: 100%;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+	font-family: 'Poppins', sans-serif; 
+	transition: all .4s;
+}
+header .menu-a ul li a:hover{
+	font-size: 16px;
+	color: #fca311;
+}
+nav{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s ease-in-out;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+nav ul li a{
+    font-size: 30px;
+	font-family: 'Poppins', sans-serif; 
+    color: white;
+}
+nav ul li a{
+	transition: all .7s;
+}
+nav ul li a:hover{
+	transform: translateY(+10px);
+}
+/*===Activare Nav Bar===*/
+@media (max-width:720px){
+    .activare{
+        right: 0;
+		color: #fca311;
+        background-color: black;
+    }
+    header .humburger{
+        visibility: visible;
+    }
+    header .menu-a{
+        position: fixed;
+        top: 0;
+        right: -150%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: black;
+    }
+    header .menu-a ul{
+        display: flex;
+        flex-direction: column;
+        gap: 15x;
+    }
+    .h-button{
+        margin-right: 15px;
+        visibility: visible;
+        opacity: 1;
+    }
+    nav{
+        z-index: 99999;
+    }
+    nav ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    nav ul .close-btn{
+		width: max-content;
+        height: max-content;
+        margin-top: 0px;
+		margin-right: 20px;
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    nav ul .close-btn button{
+        width: max-content;
+        height: max-content;
+		padding-right: 3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+		background-color: transparent;
+        border: none;
+		cursor: pointer;
+    }
+	.close-btn span{
+		width: 50px;
+		height: 50px;
+		font-size: 50px; 
+		color: #FFF;
+		line-height: 100px;
+		text-align: center;
+	}
+}
+
+/*===Pagina de Introducere===*/
+
+.introduction-page{
+    width: 100%;
+    height: 700px;
+    background: rgba(0,0,0,.4) url("Image/casa1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-blend-mode: darken;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+	padding-bottom: 100px;
+}
+.introduction-page .text{
+	padding-top: 100px;
+    text-align: center;
+	width: 95%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	cursor: default;
+}
+.introduction-page .text .text1{
+    font-size: 38px;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	color: white;
+}
+.introduction-page .text .text2{
+	font-family: 'Poppins', sans-serif;
+	font-size: 25px;
+	text-align: center;
+	color: white;
+}
+.introduction-page .text .under-line{
+	width: 100%;
+	height: 6px;
+	background-color: #fca311;
+}
+.introduction-page .button-inchiriere{
+	width: max-content;
+	height: max-content;
+	position: relative;
+	top: 30px;
+	padding: 20px;
+	background-color: #FFFFFF;
+	border-radius: 45px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 900;
+	color: black;
+	text-align: center;
+
+	transition: all .4s ease-in-out;
+}
+.introduction-page .button-inchiriere:hover{
+	background-color: #fca311;
+}
+
+		/*=== Section Despre Noi ===*/
+.section-details{
+	position: relative;
+	width: 100%;
+	height: max-content;
+	position: relative;
+	display:  flex;
+	align-items: center;
+	flex-direction: column;
+	background-color: rgb(241, 243, 246);
+}
+.section-details .details{
+	max-width: 800px;
+	height: max-content;
+	padding: 80px 30px 180px 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+	text-align: center;
+}
+.section-details .details .title {
+	font-family: 'Poppins', sans-serif;
+	font-size: 35px;
+	font-weight: 750;
+}
+.section-details .details-company{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 19px;
+	font-weight: 300;	
+
+}
+.section-details .details-company .title{
+	font-family: 'Poppins', sans-serif;
+	font-size: 25px;
+	font-weight: 550;
+}
+.section-details .details-company .description{
+	text-align: center;
+	font-size: 20px;
+}
+.section-details .details-company .description span{
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	font-weight: 580;
+	border-bottom: 2px solid black ;
+}
+#title-caracteristici{
+	padding-top: 65px;
+}
+	.custom-shape-divider-bottom-1673625272 {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+		transform: rotate(180deg);
+	}
+
+	.custom-shape-divider-bottom-1673625272 svg {
+		position: relative;
+		display: block;
+		width: calc(110% + 1.3px);
+		height: 120px;
+	}
+
+	.custom-shape-divider-bottom-1673625272 .shape-fill {
+		fill: #FFFFFF;
+	}
+
+		/*===Galerie===*/
+.section-gallery{
+	width: 95%;
+	height: max-content;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 50px;
+}
+.section-gallery .title{
+	font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    font-weight: 750;
+}
+.section-gallery .box-gallery{
+	width: 100%;
+	height: max-content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 25px 15px;
+	flex-direction: row;
+}
+.box-gallery img{
+	max-width: 350px;
+}
+
+		/*===Servicii===*/
+.section-servici{
+	width: 100%;
+	height: max-content;
+	padding:  80px 0 45px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	background-color: rgb(241, 243, 246);
+}
+.section-servici .box-details{
+	max-width: 800px;
+	height: max-content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 50px;
+	text-align: center;
+}
+.box-details .title{
+	width: 90%;
+	height: max-content;
+	font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    font-weight: 750;
+	text-align: center;
+}
+.box-details .continut{
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	width: 90%;
+}
+.box-details .continut .box-continut{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 0 40px 0 40px;
+}
+.box-details .box-continut .description{
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	font-weight: 350;
+	text-align: center;
+}
+.box-details .continut span{
+	font-weight: 580;
+	border-bottom: 2px solid black;
+}
+.box-details .continut .title{
+	width: 100%;
+	height: max-content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: black;
+	font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+	text-align: center;
+}
+.box-details .box-pasi{
+	width: 100%;
+	height: max-content;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: row;
+	gap: 20px;
+}
+.box-pasi .pasi{
+	width: 200px;
+	height: max-content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 8px;
+}
+.box-pasi .pasi .title{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+	color: black;
+}
+.box-pasi .pasi .title .under-line{
+	width: 120px;
+	height: 2.5px;
+	background-color: black;
+}
+.box-pasi .pasi .description{
+	font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 350;
+    text-align: center;
+}
+.box-details .continut .box-benefici{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+	gap: 20px;
+	padding: 0 40px 0 40px;
+}
+.box-details .continut .box-benefici .benefici{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+	gap: 10px;
+}
+.box-details .continut .box-benefici .title{
+	color: #fca311;
+}
+.box-details .continut .box-benefici h4{
+	color: black;
+	font-family: 'Dancing Script', cursive;
+	font-size: 35px;
+	font-weight: 400;
+	text-align: center;
+}
+.box-details .continut .box-benefici h6{
+	color: black;
+	font-family: 'Dancing Script', cursive;
+	font-size: 35px;
+	font-weight: 400;
+}
+
+		/*===Contact===*/
+.section-contact{
+	width: 100%;
+	height: max-content;
+	padding: 30px 0px 30px 0px;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.box-contact{
+	width: 815px;
+	height: max-content;
+	margin-left: 30px;
+	margin-right: 30px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 20px;
+	overflow: hidden;
+}
+.section-contact .titlu{
+	padding-bottom: 30px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 22px;
+	font-weight: 750px;
+	text-align: center;
+}
+.box-contact .details-contact{
+	width: max-content;
+	height: max-content;
+	background-color: transparent;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.box-contact .box-details{
+	height: max-content;
+	display: flex;
+	padding-top: 30px;
+	align-items: center;
+	flex-direction: row;
+	gap: 20px;
+	background-color: transparent;
+}
+.details-contact .box-details-adresa{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding-left: 30px;
+}
+.details-contact .box-details-adresa .adresa{
+	width: 300px;
+	height: max-content;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	gap: 20px;
+}
+.adresa h3{
+	font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 550;
+	text-align: center;
+	color: black;
+	word-wrap: break-word;
+}
+.adresa img{
+	width: 50px;
+}
+.adresa .phone_number{
+	color: #fca311;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+}
+.details-contact .harta{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+.details-contact iframe{
+	width: 300px;
+	height: 220px;
+}
+.adresa-media{
+	display: none;
+}
+.social-media{
+	padding-top: 10px;
+	height: max-content;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 25px;
+	padding-bottom: 10px;
+}
+.social-media a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all .4s;
+}
+.social-media a:hover{
+	opacity: .7;
+}
+.retele a .instagram{
+	padding-top: 4px;
+	padding-left: 2px;
+}
+.social-media a img{
+	width: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer{
+	width: 100%;
+	height: 90px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	
+}
+footer .text{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+    text-align: center;
+}
+footer .text h4{
+	width: 95%;
+	color: white;
+	font-size: 16px;
+	font-weight: 400;
+	font-family: 'Poppins', sans-serif;
+}
+
+/*===Sectiune Contact===*/
+@media (max-width:890px){
+	.details-contact .box-details{
+		display: flex;
+		flex-direction: column;	
+	}
+	.box-contact{
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
+/*===Width Section-Contact===*/
+@media (max-width:888px){
+	.box-contact{
+		width: max-content;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+/*=== Hover Nav Bar si Buton ===*/
+@media (min-width: 768px){
+	header .menu-a ul li:hover{
+		transform: translateY(-5px);
+	}
+}
+/*===Hover Buton===*/
+@media (max-width:768px){
+	.introduction-page .button-inchiriere:hover{
+		background-color: white;
+	}
+	header .menu-a ul li a{
+		transition: none;
+	}
+	header .menu-a ul li a:hover{
+		color: white;
+		transform: translateY(0px);	
+		font-size: 17px;
+	}
+}
+/*===Pasi===*/
+@media (max-width:751px){
+	.box-details .box-pasi{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: 28px;
+		padding: 0;
+	}
+}
+/*=== Butonul de Call pentru Telefon ===*/
+.call-button{
+    visibility: hidden;
+}
+@media (max-width:600px){
+    .call-button{
+        visibility: visible;
+        position: fixed;
+        right: 20px;
+        top: 89%;
+        width: 55px;
+        height: 55px;
+        background-color: white;
+        box-shadow: 0 0 6px 2px rgba(0, 0, 0, .1);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .2s ease-in-out;
+        cursor: pointer;
+    }
+    .call-button a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .call-button img{
+        width: 37px;
+        height: 37px;
+    }
+}
+
+/*=== Se schimba Shape Valuri ===*/
+@media (max-width: 500px) {
+	.custom-shape-divider-bottom-1673625272 svg {
+		width: calc(110% + 1.3px);
+		height: 75px;
+	}
+}
+/*===Box contact===*/
+@media (max-width:470px){
+	.box-contact{
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+}
+/*=== Galerie Imagini text pozitionat start ===*/
+@media (max-width: 420px){
+	.box-gallery img{
+		min-width: 100px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+/*===Font Size Text Acasa===*/
+@media (max-width:390px){
+	.introduction-page .text .text1 h1{
+		font-size: 40px;
+	}
+	/*==Harta width height==*/
+	.details-contact iframe{
+		width: 250px;
+		height: 180px;
+	}
+}
+/*===Linii de cu noi Castigi===*/
+@media (max-width: 370px){
+	.box-details .continut .box-benefici h6{
+		display: none;
+	}
+	.details-contact .box-details-adresa .adresa{
+		width: max-content;
+	}
+	/*==Adresa Text==*/
+	.details-contact .box-details-adresa{
+		padding: 0;
+	}
+	.adresa h3{
+		font-size: 12px;
+	}
+	.box-contact{
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+}
+/*===Harta width height===*/
+@media (max-width:350px){
+	.details-contact iframe{
+		width: 200px;
+		height: 150px;
+	}
+}
+/*===Adresa===*/
+@media (max-width:320px){
+	.box-adresa{
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+	}
+	.details-contact .box-details-adresa{
+		display: flex;
+		gap: 18px;
+	}
+	.adresa-media{
+		display: block;
+		font-family: 'Poppins', sans-serif;
+		font-weight: 700;
+		font-size: 20px;
+		text-align: center;
+	}
+	.adresa h3{
+		font-size: 13px;
+	}
+	.adresa img{
+		display: none;
+	}
+}
+/*=== Linie Text Acasa ===*/
+@media (max-width: 300px){
+	.introduction-page .text .under-line{
+		visibility: hidden;
+	}
+}
+/*=== Linii Section SERVICII ===*/
+@media (max-width:280px){
+	.introduction-page .text .text1 {
+		font-size: 30px;
+	}
+}
+
+
+
+
+
+
