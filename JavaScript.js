@@ -1,10 +1,10 @@
 let i=1;
   function afisare(){
     let humburger = document.getElementById("nav");
+    let body=document.querySelectorAll("body");
     if(i==1){
       humburger.classList.add("activare");
       i=2;
-      console.log(i);
     }else if(i==2){
       humburger.classList.remove("activare");
       i=1;

@@ -251,6 +251,7 @@ nav ul li a:hover{
 		line-height: 100px;
 		text-align: center;
 	}
+	
 }
 
 /*===Pagina de Introducere===*/
@@ -705,6 +706,8 @@ footer .text h4{
 	font-weight: 400;
 	font-family: 'Poppins', sans-serif;
 }
+
+		/*========MEDIA========*/
 
 /*===Sectiune Contact===*/
 @media (max-width:890px){
