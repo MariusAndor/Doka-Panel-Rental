@@ -1,2 +1,2 @@
-https://holso.github.io/MariusAndor/Inchirieri-Panouri-Doka/
+https://mariusandor.github.io/Doka-Panel-Rental/
 # Inchirieri-Panouri-Doka
