@@ -1,2 +1,2 @@
-https://holso.github.io/Inchirieri-Panouri-Doka/
+https://holso.github.io/MariusAndor/Inchirieri-Panouri-Doka/
 # Inchirieri-Panouri-Doka
